@@ -138,5 +138,5 @@ resource "aws_iam_policy_attachment" "additional" {
 
   name       = "${var.function_name}"
   roles      = ["${aws_iam_role.lambda.name}"]
-  policy_arn = "${aws_iam_policy.additional.arn}"
+  policy_arn = "${aws_iam_policy.additional.0.arn}"
 }
